@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kensei Mestre da Espada</title>
+
+    <link href="images/iconkensei.png" rel="shortcut icon">
+    <link href="style.css" rel="stylesheet">
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggle = document.querySelector('.menu-toggle');
+      const menu = document.querySelector('.nav-menu ul');
+  
+      toggle.addEventListener('click', function () {
+        menu.classList.toggle('active');
+      });
+    });
+  </script>
+<body>
+    <header>
+        <a href="Index.html" title="Home">
+            <img src="images/lua.png" alt="Lua" class="lua">
+          </a>
+        
+          <!-- Botão hambúrguer para mobile -->
+          <button class="menu-toggle" aria-label="Abrir Menu">☰</button>
+        
+          <nav class="nav-menu">
+            <ul>
+              <li><a href="#" title="Home">Home</a></li>
+              <li><a href="#sobre" title="Sobre o Game">Sobre o Game</a></li>
+              <li><a href="#depoimentos" title="Personagens">Personagens</a></li>
+              <li><a href="#contato" title="Contato" class="btn">Contato</a></li>
+            </ul>
+          </nav>
+    </header>
+   <main>
+    <section id="banner">
+        <div class="Tabela">
+            <div class="Coluna">
+                <p>
+                    Prepare-se para uma aventura sobrenatural!
+                </p>
+                <h1>Kensei Mestre da Espada</h1>
+                <p>
+                    <a href="#sobre" title="Sobre" class="btn">
+                        Sobre o Game
+                    </a>
+                </p>
+            </div>
+            <div class="Coluna">
+                <img src="images/rosto.png" alt="Kensei">
+        </div>
+    </section>
+    <section id="sobre">
+        <h2>Conheça o Game</h2>
+        <img src="images/Captura de tela 2025-04-07 204633.png" alt="Servidores" class="image">
+        <P>Kensei Mestre da Espada é um jogo 2D onde um Jovem Samurai chamado "Kensei" tem a missão de banir as trevas que cairam sobre a floresta
+            de sua aldeia. Com sua maestria em utilizar Katanas, Kensei precisará adentrar na floresta e derrortar o grande Líder das trevas "Oniroshi, O Devorador de Almas" </P> 
+            <p>Junte-se nesta batalha e ajude Kensei a banir as trevas de seu território! Mas tenha cuidado! Muitas ameaças estão pelo caminho até seu objetivo final!
+            </p>
+    </section>   
+    <section id="depoimentos">
+        <h2>Personagens</h2>
+        <div class="grid-3">
+            <div class="col">
+                <img src="images/Kensei.png" class="kensei">
+                        <p>
+                            Kensei
+                        </p>
+            </div>
+            <div class="col">
+                <img src="images/Alma.png" class="almas">
+                        <p>
+                            Almas
+                        </p>
+            </div>
+            <div class="col">
+                <img src="images/Oniroshi.png" class="oniroshi">
+                        <p>
+                            Oniroshi
+                        </p>
+            </div>
+        </div>
+    </section>
+    <iframe width="100%" height="500px" src="Jogo/index.html"></iframe>
+    <p>
+        <a href="Jogo/index.html" target="_blank" class="btn">
+            Abrir em uma nova janela
+        </a>
+    </p>
+   <h1>Formulário Cadastral</h1>
+   <form id="form">
+    <label>Nome:</label>
+    <input type="text" id="nome">
+    <label>E-mail:</label>
+    <input type="email" id="email">
+    <label>Telefone:</label>
+    <input type="text" id="telefone">
+    <button type="button" id="botao">Enviar</button>
+   </form>
+   <script>
+    // Captura o botão pelo ID e adiciona um evento de clique
+    document.getElementById('botao').onclick = function() {
+        //Obtém o valor do campo "nome"
+        var nome = document.getElementById('nome').value;
+         //Obtém o valor do campo "email"
+         var email = document.getElementById('email').value; 
+         //Obtém o valor do campo "telefone"
+         var telefone = document.getElementById('telefone').value;
+
+         //Verifica se todos os campos estão vazios ao mesmo tempo
+         if (nome == "" && email == "" && telefone == ""){
+            alert("Por Favor, Preencha todos os campos."); //Exibe um alerta para  infromar que todos os campos estão vazios
+         } else {
+            // Verifica individualmentte se o campo "nome" esteja vazio
+            if (nome == "") {
+                alert("Informe o nome"); //Exibe um alerta caso o campo "nome" esteja vazio
+            }
+
+             // Verifica individualmentte se o campo "email" esteja vazio
+             if (email == "") {
+                alert("Informe o email"); //Exibe um alerta caso o campo "email" esteja vazio
+            }
+
+             // Verifica individualmentte se o campo "telefone" esteja vazio
+             if (telefone == "") {
+                alert("Informe o telefone"); //Exibe um alerta caso o campo "telefone" esteja vazio
+            }
+         }
+
+         // Confirma que todos os campos foram preenchidos
+         if (nome != "" && email != "" && telefone != "") {
+            alert("Formulário enviado com sucesso"); // Exibe um alerta de sucesso informando que o formulário foi enviado
+         }
+
+    }
+   </script>
+   
+    <section id="contato">
+        <h2>entre em contato</h2>
+        <p>
+           <strong> Nosso E-mail:</strong> <a href="">lincolntonolo@gmail.com</a>
+        </p>
+       <p>
+        <strong>Nosso Endereço:</strong> R.Clementino Farago N72, Jardim 3 Marias, Campo Mourão - PR
+       </p>
+       <p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1822.0135144862759!2d-52.36399675778864!3d-24.03011199940143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ed752d00c2b477%3A0xd65ce0f7c40adcc7!2sR.%20Clementino%20Farago%2C%2072%20-%20Conj.%20Res.%20Ilha%20Bela%2C%20Campo%20Mour%C3%A3o%20-%20PR%2C%2087309-021!5e0!3m2!1spt-PT!2sbr!4v1742513354609!5m2!1spt-PT!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       </p>
+    </section>
+   </main>
+   <footer>
+    <p>
+        <img src="images/attackD.png">
+        <img src="images/tree.png" alt="Árvores">
+        <img src="images/attackE.png">
+        <p>
+            Desenvolvido Por Lincoln Tonolo - Todos os Direitos Reservados
+        </p>
+    </p>
+   </footer>
+</body>
+</html>
+
